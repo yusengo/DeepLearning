@@ -1,0 +1,6 @@
+http://blog.csdn.net/times_poem/article/details/51596233
+http://open.163.com/special/opencourse/machinelearning.html
+https://www.zhihu.com/question/34681168
+https://github.com/wagamamaz/tensorflow-tutorial
+https://github.com/zsdonghao/tensorlayer
+http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B
