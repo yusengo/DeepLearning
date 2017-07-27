@@ -1,0 +1,79 @@
+str()一般是将数值转成字符串。 
+repr()是将一个对象转成字符串显示，注意只是显示用，有些对象转成字符串没有直接的意思。
+如list,dict使用str()是无效的，但使用repr可以，这是为了看它们都有哪些值，为了显示之用。 
+
+The str() function is meant to return representations of values which are fairly
+human-readable, while repr() is meant to generate representations which can be read by
+the interpreter (or will force a SyntaxError if there is not equivalent syntax). 
+
+For objects which don't have a particular representation for human consumption, 
+str() will return the same value as repr(). 
+Many values, such as numbers or structures like lists and dictionaries, 
+have the same representation using either function. 
+
+Strings and floating point numbers, in particular, have two distinct representations.
+
+Some examples:
+
+
+>>> s = 'Hello, world.'
+
+>>> str(s)
+
+'Hello, world.'
+
+>>> repr(s)
+
+"'Hello, world.'"
+
+>>> str(0.1)
+
+'0.1'
+
+>>> repr(0.1)
+
+'0.10000000000000001'
+
+>>> x = 10 * 3.25
+
+>>> y = 200 * 200
+
+>>> s = 'The value of x is ' + repr(x) + ', and y is ' + repr(y) + '...'
+
+>>> print s
+
+The value of x is 32.5, and y is 40000...
+
+>>> # The repr() of a string adds string quotes and backslashes:
+
+... hello = 'hello, world\n'
+
+>>> hellos = repr(hello)
+
+>>> print hellos
+
+'hello, world\n'
+
+>>> # The argument to repr() may be any Python object:
+
+... repr((x, y, ('spam', 'eggs')))
+
+"(32.5, 40000, ('spam', 'eggs'))"
+
+>>> # reverse quotes are convenient in interactive sessions:
+
+... `x, y, ('spam', 'eggs')`
+
+"(32.5, 40000, ('spam', 'eggs'))"
+
+>>> hel = 'hhjjhjj\n'
+>>> repr(hel)
+"'hhjjhjj\\n'"//这里双斜杠
+>>> str(hel)
+'hhjjhjj\n'//字符串原样输出
+>>> print repr(hel)
+'hhjjhjj\n'
+>>> print str(hel)
+hhjjhjj
+
+>>> 
